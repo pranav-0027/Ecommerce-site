@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +10,7 @@ import { CartProvider } from './contexts/cart.context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <UserProvider>
         <CategoriesProvider>
           <CartProvider>
@@ -18,7 +18,7 @@ ReactDOM.render(
           </CartProvider>
         </CategoriesProvider>
       </UserProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
