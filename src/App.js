@@ -4,8 +4,12 @@ import Navigation from './routes/navigation/navigation.component';
 import Signin from './routes/authentication/authentication.component';
 import Shop from './routes/shop/shop.component';
 import Checkout from './routes/checkout/checkout.component';
+import { useEffect } from 'react';
 
 const App = () => {
+  useEffect(() => {
+    document.title = 'Ecommerce Site';
+  },[]);
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
